@@ -1,0 +1,20 @@
+<html>
+<body>
+    <p> Enter number between 50 and 250 and click OK</p>
+    <input id="id1" type="number" min="50" max="250" required>
+    <button onclick="validate()">OK</button>
+    <p id="result"></p>
+    <script>
+        function validate(){
+       var inpobj=     document.getElementById("id1")
+       if(!inpobj.checkValidity()){
+        document.getElementById("result").innerHTML=inpobj.validationMessage
+       }
+       else{
+        document.getElementById("result").innerHTML="inputOK"
+       }
+        }
+        
+    </script>
+</body>
+</html>
